@@ -1,0 +1,25 @@
+plugins {
+    id 'org.asciidoctor.jvm.convert' version '2.4.0'
+}
+
+
+repositories {
+    jcenter()
+}
+
+configurations {
+    asciidoctorExt
+}
+
+dependencies {
+    asciidoctorExt "com.puravida.asciidoctor:asciidoctor-barcode:2.4.1"
+    asciidoctorExt project(":asciidoctorj-twitter-extension")
+}
+
+asciidoctorj{
+    version '2.0.0'
+}
+
+asciidoctor {
+    configurations 'asciidoctorExt'
+}

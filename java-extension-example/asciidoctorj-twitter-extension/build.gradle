@@ -1,0 +1,18 @@
+repositories {
+    mavenCentral()
+}
+
+apply plugin: 'java'
+
+// groupId = 'org.asciidoctor.gradle'
+// artifactId = 'asciidoctorj-twitter-extension'
+version = '1.0.0-SNAPSHOT'
+
+compileJava {
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+}
+
+dependencies {
+    compile "org.asciidoctor:asciidoctorj:2.2.0"
+}
