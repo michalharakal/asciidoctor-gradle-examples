@@ -1,0 +1,34 @@
+= Example Manual
+Doc Writer <doc.writer@example.org>
+2015-06-12
+:revnumber: {project-version}
+
+Writing an AsciiDoctor extension using Java is _easy_! Ask twitter:mrhaki[] about it.
+
+This is a user manual for an empty project.
+
+barcode:code128[1234567890123]
+
+[source,groovy,indent=0,subs="verbatim,attributes",role="primary"]
+.Groovy
+----
+docker {
+    registryCredentials {
+        url = 'https://gcr.io'
+        username = '_json_key'
+        password = file('keyfile.json').text
+    }
+}
+----
+
+[source,kotlin,indent=0,subs="verbatim,attributes",role="secondary"]
+.Kotlin
+----
+docker {
+    registryCredentials {
+        url.set("https://gcr.io")
+        username.set("_json_key")
+        password.set(file("keyfile.json").readText())
+    }
+}
+----
